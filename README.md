@@ -29,7 +29,7 @@
 ```bash
 # 在你的 Hugo 站点目录下
 git init
-git submodule add https://github.com/yourname/bolo themes/bolo
+git submodule add https://github.com/zhangzhuo0705/hugo-solo-nexmoe.git themes/bolo
 ```
 
 ### 配置
@@ -37,7 +37,9 @@ git submodule add https://github.com/yourname/bolo themes/bolo
 在 `hugo.toml` 中设置主题：
 
 ```toml
-cp themes/bolo
+cp themes/bolo/archetypes/archives.md themes/bolo/archetypes/links.md content/
+
+cp themes/bolo/exampleSite/config.toml hugo.toml
 ```
 
 ### 运行

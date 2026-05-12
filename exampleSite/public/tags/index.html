@@ -20,7 +20,7 @@
             </a>
             <div class="mdui-toolbar-spacer"></div>
             <a href="/" title="示例博客" class="mdui-btn mdui-btn-icon">
-                <img src="https://zhangzhuo-1257627961.cos.ap-beijing.myqcloud.com/boke/boke4.jpg" title="示例博客" alt="示例博客">
+                <img src="/images/avatar.png" title="示例博客" alt="示例博客">
             </a>
         </div>
     </div>
@@ -29,7 +29,7 @@
     <div class="nexmoe-drawer mdui-drawer" id="drawer">
         <div class="nexmoe-avatar mdui-ripple">
             <a href="/" title="示例博客">
-                <img src="https://zhangzhuo-1257627961.cos.ap-beijing.myqcloud.com/boke/boke4.jpg" title="示例博客" alt="示例博客">
+                <img src="/images/avatar.png" title="示例博客" alt="示例博客">
             </a>
         </div>
         <div class="nexmoe-count">
@@ -169,184 +169,89 @@
         <div class="nexmoe-primary">
             <main id="pjax" class="fn__flex-1">
                 
-<section class="nexmoe-posts" id="brand-waterfall">
-    
-    
-    
-    <div class="nexmoe-post">
-        <a href="http://localhost:1313/tags/javascript/" title="JavaScript">
-            <div class="nexmoe-post-cover mdui-ripple">
-                
-                <img referrerpolicy="origin" src="/images/default-cover.jpg" alt="JavaScript" class="lazyload index-img">
-                
-                <h1>JavaScript</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <span><i class="nexmoefont iconfont solo-calendarl"></i>2024年05月12日</span>
+<style>
+.term-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 0;
+}
+.term-item {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: #333;
+    transition: all 0.2s;
+}
+.term-item:hover {
+    background: #ff4e6a;
+    color: #fff;
+    transform: translateY(-2px);
+}
+.term-count {
+    margin-left: 5px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+</style>
+<div class="nexmoe-post">
+    <div class="nexmoe-post-cover">
+        <h1>Tags</h1>
+    </div>
+    <article>
+        <div class="term-list">
             
+            <a class="term-item" href="http://localhost:1313/tags/hugo/">
+                Hugo
+                <span class="term-count">(1)</span>
+            </a>
+            
+            <a class="term-item" href="http://localhost:1313/tags/javascript/">
+                JavaScript
+                <span class="term-count">(1)</span>
+            </a>
+            
+            <a class="term-item" href="http://localhost:1313/tags/python/">
+                Python
+                <span class="term-count">(1)</span>
+            </a>
+            
+            <a class="term-item" href="http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/">
+                前端
+                <span class="term-count">(1)</span>
+            </a>
+            
+            <a class="term-item" href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/">
+                博客
+                <span class="term-count">(1)</span>
+            </a>
+            
+            <a class="term-item" href="http://localhost:1313/tags/%E5%BC%80%E5%A7%8B/">
+                开始
+                <span class="term-count">(1)</span>
+            </a>
+            
+            <a class="term-item" href="http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                数据分析
+                <span class="term-count">(1)</span>
+            </a>
+            
+            <a class="term-item" href="http://localhost:1313/tags/%E7%94%9F%E6%B4%BB/">
+                生活
+                <span class="term-count">(1)</span>
+            </a>
+            
+            <a class="term-item" href="http://localhost:1313/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/">
+                静态网站
+                <span class="term-count">(1)</span>
+            </a>
             
         </div>
-        <article>
-            <p class="summary"></p>
-        </article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/" title="前端">
-            <div class="nexmoe-post-cover mdui-ripple">
-                
-                <img referrerpolicy="origin" src="/images/default-cover.jpg" alt="前端" class="lazyload index-img">
-                
-                <h1>前端</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <span><i class="nexmoefont iconfont solo-calendarl"></i>2024年05月12日</span>
-            
-            
-        </div>
-        <article>
-            <p class="summary"></p>
-        </article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="http://localhost:1313/tags/python/" title="Python">
-            <div class="nexmoe-post-cover mdui-ripple">
-                
-                <img referrerpolicy="origin" src="/images/default-cover.jpg" alt="Python" class="lazyload index-img">
-                
-                <h1>Python</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <span><i class="nexmoefont iconfont solo-calendarl"></i>2024年05月10日</span>
-            
-            
-        </div>
-        <article>
-            <p class="summary"></p>
-        </article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" title="数据分析">
-            <div class="nexmoe-post-cover mdui-ripple">
-                
-                <img referrerpolicy="origin" src="/images/default-cover.jpg" alt="数据分析" class="lazyload index-img">
-                
-                <h1>数据分析</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <span><i class="nexmoefont iconfont solo-calendarl"></i>2024年05月10日</span>
-            
-            
-        </div>
-        <article>
-            <p class="summary"></p>
-        </article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="http://localhost:1313/tags/%E7%94%9F%E6%B4%BB/" title="生活">
-            <div class="nexmoe-post-cover mdui-ripple">
-                
-                <img referrerpolicy="origin" src="/images/default-cover.jpg" alt="生活" class="lazyload index-img">
-                
-                <h1>生活</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <span><i class="nexmoefont iconfont solo-calendarl"></i>2024年05月06日</span>
-            
-            
-        </div>
-        <article>
-            <p class="summary"></p>
-        </article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="http://localhost:1313/tags/hugo/" title="Hugo">
-            <div class="nexmoe-post-cover mdui-ripple">
-                
-                <img referrerpolicy="origin" src="/images/default-cover.jpg" alt="Hugo" class="lazyload index-img">
-                
-                <h1>Hugo</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <span><i class="nexmoefont iconfont solo-calendarl"></i>2024年02月01日</span>
-            
-            
-        </div>
-        <article>
-            <p class="summary"></p>
-        </article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="http://localhost:1313/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" title="静态网站">
-            <div class="nexmoe-post-cover mdui-ripple">
-                
-                <img referrerpolicy="origin" src="/images/default-cover.jpg" alt="静态网站" class="lazyload index-img">
-                
-                <h1>静态网站</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <span><i class="nexmoefont iconfont solo-calendarl"></i>2024年02月01日</span>
-            
-            
-        </div>
-        <article>
-            <p class="summary"></p>
-        </article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/" title="博客">
-            <div class="nexmoe-post-cover mdui-ripple">
-                
-                <img referrerpolicy="origin" src="/images/default-cover.jpg" alt="博客" class="lazyload index-img">
-                
-                <h1>博客</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <span><i class="nexmoefont iconfont solo-calendarl"></i>2024年01月15日</span>
-            
-            
-        </div>
-        <article>
-            <p class="summary"></p>
-        </article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="http://localhost:1313/tags/%E5%BC%80%E5%A7%8B/" title="开始">
-            <div class="nexmoe-post-cover mdui-ripple">
-                
-                <img referrerpolicy="origin" src="/images/default-cover.jpg" alt="开始" class="lazyload index-img">
-                
-                <h1>开始</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <span><i class="nexmoefont iconfont solo-calendarl"></i>2024年01月15日</span>
-            
-            
-        </div>
-        <article>
-            <p class="summary"></p>
-        </article>
-    </div>
-    
-</section>
-
-
+    </article>
+</div>
 
             </main>
             <div class="nexmoe-hitokoto">
