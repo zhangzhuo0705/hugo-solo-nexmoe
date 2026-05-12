@@ -1,11 +1,18 @@
-name = "bolo"
+name = "Bolo"
 license = "MIT"
 licenselink = "https://github.com/yourname/bolo/blob/master/LICENSE"
-description = "A Hugo theme converted from solo-nexmoe static site"
+description = "A clean and responsive Hugo blog theme converted from solo-nexmoe, featuring MDUI framework and canvas background animation"
 homepage = "https://github.com/yourname/bolo"
-tags = ["blog", "responsive", "mdui", "nexmoe"]
-features = ["blog", "archives", "tags", "social-links", "friend-links"]
+demosite = "https://yourname.github.io/bolo-demo"
+tags = ["blog", "responsive", "mdui", "nexmoe", "minimal", "chinese"]
+features = ["blog", "archives", "tags", "categories", "social-links", "friend-links", "toc", "pagination", "canvas-animation"]
+min_version = "0.80.0"
 
 [author]
   name = "yourname"
   homepage = "https://yourname.example.com"
+
+[original]
+  author = "nexmoe"
+  homepage = "https://nexmoe.com"
+  repo = "https://github.com/nexmoe/hugo-theme-nexmoe"
