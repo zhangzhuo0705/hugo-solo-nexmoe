@@ -7,7 +7,7 @@
 
 ## 预览
 
-![Screenshot](images/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/zhangzhuo0705/hugo-solo-nexmoe/main/images/screenshot.png)
 
 ## 特性
 
@@ -37,7 +37,7 @@ git submodule add https://github.com/yourname/bolo themes/bolo
 在 `hugo.toml` 中设置主题：
 
 ```toml
-theme = "bolo"
+cp themes/bolo
 ```
 
 ### 运行
