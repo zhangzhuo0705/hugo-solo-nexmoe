@@ -1,0 +1,45 @@
+{{ define "main" }}
+<style>
+.term-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 0;
+}
+.term-item {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: #333;
+    transition: all 0.2s;
+}
+.term-item:hover {
+    background: #ff4e6a;
+    color: #fff;
+    transform: translateY(-2px);
+}
+.term-count {
+    margin-left: 5px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+</style>
+<div class="nexmoe-post">
+    <div class="nexmoe-post-cover">
+        <h1>{{ .Title }}</h1>
+    </div>
+    <article>
+        <div class="term-list">
+            {{ range .Data.Terms.ByCount }}
+            <a class="term-item" href="{{ .Page.Permalink }}">
+                {{ .Page.Title }}
+                <span class="term-count">({{ .Count }})</span>
+            </a>
+            {{ end }}
+        </div>
+    </article>
+</div>
+{{ end }}
