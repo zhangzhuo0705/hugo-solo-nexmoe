@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生活 on 示例博客</title>
+    <link>https://example.org/tags/%E7%94%9F%E6%B4%BB/</link>
+    <description>Recent content in 生活 on 示例博客</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>周末爬山记</title>
+      <link>https://example.org/posts/post3/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://example.org/posts/post3/</guid>
+      <description>&lt;p&gt;周末和朋友一起去爬山，风景很美，空气清新，是一次不错的户外体验。&lt;/p&gt;&#xA;&lt;p&gt;早晨六点出发，经过两个小时的车程到达山脚下。一路向上攀登，虽然有些累，但沿途的风景让人心旷神怡。&lt;/p&gt;&#xA;&lt;p&gt;到达山顶后，俯瞰整个山谷，感觉所有的疲惫都烟消云散了。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

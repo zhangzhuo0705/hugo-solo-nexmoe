@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>周末爬山记 - 示例博客</title>
+<link rel="stylesheet" href="/css/base.css"/>
+<link rel="stylesheet" href="/css/mdui.min.css">
+<link rel="stylesheet" href="/css/font-icon.css">
+
+</head>
+<body class="mdui-drawer-body-left mdui-loaded">
+    <div id="nexmoe-background">
+    <canvas id="c_n1" class="nexmoe-bg"></canvas>
+    <div class="mdui-appbar mdui-shadow-0">
+        <div class="mdui-toolbar">
+            <a href="#" mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon iconfont solo-list"></i>
+            </a>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="/" title="示例博客" class="mdui-btn mdui-btn-icon">
+                <img src="/images/avatar.png" title="示例博客" alt="示例博客">
+            </a>
+        </div>
+    </div>
+</div>
+    <div id="nexmoe-header">
+    <div class="nexmoe-drawer mdui-drawer" id="drawer">
+        <div class="nexmoe-avatar mdui-ripple">
+            <a href="/" title="示例博客">
+                <img src="/images/avatar.png" title="示例博客" alt="示例博客">
+            </a>
+        </div>
+        <div class="nexmoe-count">
+            <div>
+                <span>文章</span>
+                
+                
+                4
+            </div>
+        </div>
+        <div class="list-content">
+    <ul class="nexmoe-list mdui-list header__nav" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="首页">
+            <i class="mdui-list-item-icon iconfont solo-home"></i>
+            <div class="mdui-list-item-content">首页</div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/links/" title="友情链接">
+            <i class="mdui-list-item-icon iconfont solo-about"></i>
+            <div class="mdui-list-item-content">友情链接</div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives/" title="时间线">
+            <i class="mdui-list-item-icon iconfont solo-list"></i>
+            <div class="mdui-list-item-content">时间线</div>
+        </a>
+        
+    </ul>
+</div>
+        <aside id="nexmoe-sidebar">
+    
+    <div class="nexmoe-widget-wrap">
+        <h3 class="nexmoe-widget-title">社交按钮</h3>
+        <div class="nexmoe-widget nexmoe-social">
+            
+            <a href="https://github.com" target="_blank" title="GitHub">
+                <i class="mdui-list-item-icon iconfont solo-github"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="nexmoe-widget-wrap">
+        <h3 class="nexmoe-widget-title">标签</h3>
+        <div class="nexmoe-widget tagcloud">
+            
+            
+            <a href="https://example.org/tags/javascript/" class="mdui-ripple">javascript</a>
+            
+            
+            <a href="https://example.org/tags/python/" class="mdui-ripple">python</a>
+            
+            
+            <a href="https://example.org/tags/%E5%89%8D%E7%AB%AF/" class="mdui-ripple">前端</a>
+            
+            
+            <a href="https://example.org/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="mdui-ripple">数据分析</a>
+            
+            
+            <a href="https://example.org/tags/%E7%94%9F%E6%B4%BB/" class="mdui-ripple">生活</a>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="nexmoe-widget-wrap">
+        <h3 class="nexmoe-widget-title">分类</h3>
+        <div class="nexmoe-widget">
+            <ul class="category-list">
+                
+                
+                <li class="category-list-item">
+                    <a class="category-list-link mdui-ripple" href="https://example.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">技术文章</a>
+                    <span class="category-list-count">2</span>
+                </li>
+                
+                
+                <li class="category-list-item">
+                    <a class="category-list-link mdui-ripple" href="https://example.org/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a>
+                    <span class="category-list-count">1</span>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    
+</aside>
+        <div class="nexmoe-copyright">
+            © 2026 <a href="/">示例博客</a><br>
+            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a><br>
+            Theme <a rel="friend" href="https://github.com/yourname/bolo" target="_blank">bolo</a>
+        </div>
+    </div>
+</div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <main id="pjax" class="fn__flex-1">
+                
+<style>
+.nexmoe-post-toc {
+    position: fixed;
+    right: -260px;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    background: rgba(255,255,255,0.95);
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+.nexmoe-post-toc.show {
+    right: 0;
+}
+.nexmoe-post-toc .toc-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ff4e6a;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nexmoe-post-toc .toc-close {
+    cursor: pointer;
+    font-size: 20px;
+    color: #999;
+}
+.nexmoe-post-toc .toc-close:hover {
+    color: #ff4e6a;
+}
+.nexmoe-post-toc nav {
+    font-size: 14px;
+}
+.nexmoe-post-toc nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.nexmoe-post-toc nav > ul > li {
+    margin: 10px 0;
+}
+.nexmoe-post-toc nav ul ul {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+.nexmoe-post-toc nav ul ul ul {
+    padding-left: 40px;
+}
+.nexmoe-post-toc nav li {
+    line-height: 1.6;
+}
+.nexmoe-post-toc nav a {
+    color: #666;
+    text-decoration: none;
+    display: block;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.nexmoe-post-toc nav a:hover {
+    color: #ff4e6a;
+    background: rgba(255,78,106,0.1);
+}
+.nexmoe-toc-toggle {
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    width: 40px;
+    height: 40px;
+    background: #ff4e6a;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    box-shadow: 0 2px 10px rgba(255,78,106,0.3);
+}
+.nexmoe-toc-toggle:hover {
+    background: #ff6b7a;
+}
+</style>
+
+
+<div class="nexmoe-toc-toggle" onclick="toggleToc()">
+    <i class="iconfont solo-list"></i>
+</div>
+<aside class="nexmoe-post-toc" id="nexmoe-toc">
+    <div class="toc-title">
+        <span>目录</span>
+        <span class="toc-close" onclick="toggleToc()">×</span>
+    </div>
+    <nav id="TableOfContents"></nav>
+</aside>
+<script>
+function toggleToc() {
+    var toc = document.getElementById('nexmoe-toc');
+    toc.classList.toggle('show');
+}
+</script>
+
+
+<div class="nexmoe-post">
+    <div class="nexmoe-post-cover">
+        
+        <img referrerpolicy="origin" src="/images/post3.jpg" alt="周末爬山记" class="lazyload">
+        
+        <h1>周末爬山记</h1>
+    </div>
+    <div class="nexmoe-post-meta">
+        <span>
+            <i class="nexmoefont iconfont solo-calendarl"></i>2024-05-06/2024-05-06
+        </span>
+        <span>
+            <i class="nexmoefont iconfont solo-heat"></i>98 浏览
+        </span>
+        
+        
+        <span>
+            <i class="nexomefont iconfont solo-category"></i>生活随笔
+        </span>
+        
+        
+        
+        <span><a class="nexmoefont iconfont solo-tag" href="https://example.org/tags/%E7%94%9F%E6%B4%BB/">生活</a></span>
+        
+    </div>
+    <article>
+        <div class="vditor-reset">
+            <p>周末和朋友一起去爬山，风景很美，空气清新，是一次不错的户外体验。</p>
+<p>早晨六点出发，经过两个小时的车程到达山脚下。一路向上攀登，虽然有些累，但沿途的风景让人心旷神怡。</p>
+<p>到达山顶后，俯瞰整个山谷，感觉所有的疲惫都烟消云散了。</p>
+
+        </div>
+    </article>
+</div>
+
+            </main>
+            <div class="nexmoe-hitokoto">
+                <p id="hitokoto">生活不止眼前的代码，还有诗和远方。</p>
+            </div>
+            <div class="back-to-top iconfont solo-gotop" onclick="window.scrollTo({top:0,behavior:'smooth'})"></div>
+        </div>
+    </div>
+    <script src="/js/mdui.min.js"></script>
+<script src="/js/canvas.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/lazysizes.min.js"></script>
+<script src="/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+name = "bolo"
+license = "MIT"
+licenselink = "https://github.com/yourname/bolo/blob/master/LICENSE"
+description = "A Hugo theme converted from solo-nexmoe static site"
+homepage = "https://github.com/yourname/bolo"
+tags = ["blog", "responsive", "mdui", "nexmoe"]
+features = ["blog", "archives", "tags", "social-links", "friend-links"]
+
+[author]
+  name = "yourname"
+  homepage = "https://yourname.example.com"
