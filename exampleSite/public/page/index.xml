@@ -2,16 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on 示例博客</title>
-    <link>https://example.org/page/</link>
+    <link>http://localhost:1313/page/</link>
     <description>Recent content in Pages on 示例博客</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <atom:link href="https://example.org/page/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jan 2024 12:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于我</title>
+      <link>http://localhost:1313/page/about/</link>
+      <pubDate>Mon, 01 Jan 2024 12:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/page/about/</guid>
+      <description>&lt;h2 id=&#34;关于我&#34;&gt;关于我&lt;/h2&gt;&#xA;&lt;p&gt;你好！欢迎来到我的博客。&lt;/p&gt;&#xA;&lt;p&gt;我是一名开发者，热爱技术和编程。这个博客记录了我的学习笔记、技术分享和生活感悟。&lt;/p&gt;&#xA;&lt;h3 id=&#34;技能&#34;&gt;技能&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Web 开发&lt;/li&gt;&#xA;&lt;li&gt;后端开发&lt;/li&gt;&#xA;&lt;li&gt;开源贡献&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;联系方式&#34;&gt;联系方式&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/yourname&#34;&gt;yourname&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Email: &lt;a href=&#34;mailto:yourname@example.com&#34;&gt;yourname@example.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>友情链接</title>
-      <link>https://example.org/page/links/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/page/links/</guid>
+      <link>http://localhost:1313/page/links/</link>
+      <pubDate>Mon, 01 Jan 2024 12:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/page/links/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>文章归档</title>
+      <link>http://localhost:1313/page/archives/</link>
+      <pubDate>Mon, 01 Jan 2024 12:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/page/archives/</guid>
       <description></description>
     </item>
   </channel>

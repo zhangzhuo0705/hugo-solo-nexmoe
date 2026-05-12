@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>友情链接 - 示例博客</title>
@@ -19,7 +19,7 @@
             </a>
             <div class="mdui-toolbar-spacer"></div>
             <a href="/" title="示例博客" class="mdui-btn mdui-btn-icon">
-                <img src="/images/avatar.png" title="示例博客" alt="示例博客">
+                <img src="https://zhangzhuo-1257627961.cos.ap-beijing.myqcloud.com/boke/boke4.jpg" title="示例博客" alt="示例博客">
             </a>
         </div>
     </div>
@@ -28,7 +28,7 @@
     <div class="nexmoe-drawer mdui-drawer" id="drawer">
         <div class="nexmoe-avatar mdui-ripple">
             <a href="/" title="示例博客">
-                <img src="/images/avatar.png" title="示例博客" alt="示例博客">
+                <img src="https://zhangzhuo-1257627961.cos.ap-beijing.myqcloud.com/boke/boke4.jpg" title="示例博客" alt="示例博客">
             </a>
         </div>
         <div class="nexmoe-count">
@@ -36,7 +36,7 @@
                 <span>文章</span>
                 
                 
-                4
+                6
             </div>
         </div>
         <div class="list-content">
@@ -65,12 +65,25 @@
         <h3 class="nexmoe-widget-title">社交按钮</h3>
         <div class="nexmoe-widget nexmoe-social">
             
+            
             <a href="https://github.com" target="_blank" title="GitHub">
+            
+                
                 <i class="mdui-list-item-icon iconfont solo-github"></i>
+                
             </a>
             
         </div>
     </div>
+    <script>
+    function showSocialInfo(name, value) {
+        mdui.dialog({
+            title: name,
+            content: value,
+            buttons: [{text: '复制', onClick: function(){navigator.clipboard.writeText(value);mdui.snackbar({message:'已复制'});}}, {text: '关闭'}]
+        });
+    }
+    </script>
     
     
     
@@ -79,19 +92,31 @@
         <div class="nexmoe-widget tagcloud">
             
             
-            <a href="https://example.org/tags/javascript/" class="mdui-ripple">javascript</a>
+            <a href="http://localhost:1313/tags/hugo/" class="mdui-ripple">hugo</a>
             
             
-            <a href="https://example.org/tags/python/" class="mdui-ripple">python</a>
+            <a href="http://localhost:1313/tags/javascript/" class="mdui-ripple">javascript</a>
             
             
-            <a href="https://example.org/tags/%E5%89%8D%E7%AB%AF/" class="mdui-ripple">前端</a>
+            <a href="http://localhost:1313/tags/python/" class="mdui-ripple">python</a>
             
             
-            <a href="https://example.org/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="mdui-ripple">数据分析</a>
+            <a href="http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/" class="mdui-ripple">前端</a>
             
             
-            <a href="https://example.org/tags/%E7%94%9F%E6%B4%BB/" class="mdui-ripple">生活</a>
+            <a href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/" class="mdui-ripple">博客</a>
+            
+            
+            <a href="http://localhost:1313/tags/%E5%BC%80%E5%A7%8B/" class="mdui-ripple">开始</a>
+            
+            
+            <a href="http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="mdui-ripple">数据分析</a>
+            
+            
+            <a href="http://localhost:1313/tags/%E7%94%9F%E6%B4%BB/" class="mdui-ripple">生活</a>
+            
+            
+            <a href="http://localhost:1313/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" class="mdui-ripple">静态网站</a>
             
         </div>
     </div>
@@ -105,13 +130,25 @@
                 
                 
                 <li class="category-list-item">
-                    <a class="category-list-link mdui-ripple" href="https://example.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">技术文章</a>
+                    <a class="category-list-link mdui-ripple" href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">技术文章</a>
                     <span class="category-list-count">2</span>
                 </li>
                 
                 
                 <li class="category-list-item">
-                    <a class="category-list-link mdui-ripple" href="https://example.org/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a>
+                    <a class="category-list-link mdui-ripple" href="http://localhost:1313/categories/%E6%95%99%E7%A8%8B/">教程</a>
+                    <span class="category-list-count">1</span>
+                </li>
+                
+                
+                <li class="category-list-item">
+                    <a class="category-list-link mdui-ripple" href="http://localhost:1313/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a>
+                    <span class="category-list-count">1</span>
+                </li>
+                
+                
+                <li class="category-list-item">
+                    <a class="category-list-link mdui-ripple" href="http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
                     <span class="category-list-count">1</span>
                 </li>
                 
@@ -132,135 +169,62 @@
             <main id="pjax" class="fn__flex-1">
                 
 <style>
-.nexmoe-post-toc {
-    position: fixed;
-    right: -260px;
-    top: 0;
-    width: 260px;
-    height: 100vh;
-    background: rgba(255,255,255,0.95);
-    padding: 20px;
-    z-index: 1000;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-    transition: right 0.3s ease;
-    overflow-y: auto;
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
 }
-.nexmoe-post-toc.show {
-    right: 0;
-}
-.nexmoe-post-toc .toc-title {
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #ff4e6a;
-    font-size: 18px;
+.link-card {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-}
-.nexmoe-post-toc .toc-close {
-    cursor: pointer;
-    font-size: 20px;
-    color: #999;
-}
-.nexmoe-post-toc .toc-close:hover {
-    color: #ff4e6a;
-}
-.nexmoe-post-toc nav {
-    font-size: 14px;
-}
-.nexmoe-post-toc nav ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
-.nexmoe-post-toc nav > ul > li {
-    margin: 10px 0;
-}
-.nexmoe-post-toc nav ul ul {
-    padding-left: 20px;
-    margin-top: 8px;
-}
-.nexmoe-post-toc nav ul ul ul {
-    padding-left: 40px;
-}
-.nexmoe-post-toc nav li {
-    line-height: 1.6;
-}
-.nexmoe-post-toc nav a {
-    color: #666;
+    padding: 15px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
     text-decoration: none;
-    display: block;
-    padding: 4px 8px;
-    border-radius: 4px;
+    color: inherit;
 }
-.nexmoe-post-toc nav a:hover {
-    color: #ff4e6a;
-    background: rgba(255,78,106,0.1);
+.link-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
-.nexmoe-toc-toggle {
-    position: fixed;
-    right: 20px;
-    top: 80px;
-    width: 40px;
-    height: 40px;
-    background: #ff4e6a;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 18px;
-    box-shadow: 0 2px 10px rgba(255,78,106,0.3);
+.link-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
-.nexmoe-toc-toggle:hover {
-    background: #ff6b7a;
+.link-card .link-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
 }
 </style>
-
-
-<div class="nexmoe-toc-toggle" onclick="toggleToc()">
-    <i class="iconfont solo-list"></i>
-</div>
-<aside class="nexmoe-post-toc" id="nexmoe-toc">
-    <div class="toc-title">
-        <span>目录</span>
-        <span class="toc-close" onclick="toggleToc()">×</span>
-    </div>
-    <nav id="TableOfContents"></nav>
-</aside>
-<script>
-function toggleToc() {
-    var toc = document.getElementById('nexmoe-toc');
-    toc.classList.toggle('show');
-}
-</script>
-
-
-<div class="nexmoe-post">
-    <div class="nexmoe-post-cover">
+<article class="links nexmoe-py">
+    <h2>友情链接</h2>
+    <div class="links-grid">
         
-        <img referrerpolicy="origin" src="/images/default-cover.jpg" alt="友情链接" class="lazyload">
+        <a class="link-card" href="https://github.com" target="_blank" rel="noopener">
+            <img src="/images/default-avatar.png" alt="GitHub">
+            <span class="link-name">GitHub</span>
+        </a>
         
-        <h1>友情链接</h1>
-    </div>
-    <div class="nexmoe-post-meta">
-        <span>
-            <i class="nexmoefont iconfont solo-calendarl"></i>0001-01-01
-        </span>
-        <span>
-            <i class="nexmoefont iconfont solo-heat"></i>0 浏览
-        </span>
+        <a class="link-card" href="https://developer.mozilla.org" target="_blank" rel="noopener">
+            <img src="/images/default-avatar.png" alt="MDN Web Docs">
+            <span class="link-name">MDN Web Docs</span>
+        </a>
         
+        <a class="link-card" href="https://stackoverflow.com" target="_blank" rel="noopener">
+            <img src="/images/default-avatar.png" alt="Stack Overflow">
+            <span class="link-name">Stack Overflow</span>
+        </a>
         
     </div>
-    <article>
-        <div class="vditor-reset">
-            
-        </div>
-    </article>
-</div>
+</article>
 
             </main>
             <div class="nexmoe-hitokoto">

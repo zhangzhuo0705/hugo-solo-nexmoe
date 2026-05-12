@@ -3,7 +3,7 @@ title: "Hugo 使用指南"
 date: 2024-02-01T14:00:00+08:00
 draft: false
 description: "Hugo 静态网站生成器的基本使用教程"
-cover: ""
+cover: "/images/cover2.jpg"
 categories:
   - 教程
 tags:

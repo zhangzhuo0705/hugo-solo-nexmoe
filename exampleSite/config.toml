@@ -4,7 +4,7 @@ title = "示例博客"
 theme = "bolo"
 
 [params]
-  avatar = "/images/avatar.png"
+  avatar = "https://zhangzhuo-1257627961.cos.ap-beijing.myqcloud.com/boke/boke4.jpg"
   hitokoto = "生活不止眼前的代码，还有诗和远方。"
   
   [[params.social]]

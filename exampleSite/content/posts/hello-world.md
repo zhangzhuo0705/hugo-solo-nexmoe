@@ -3,7 +3,7 @@ title: "你好世界"
 date: 2024-01-15T10:00:00+08:00
 draft: false
 description: "这是我的第一篇博客文章"
-cover: ""
+cover: "/images/cover1.jpg"
 categories:
   - 随笔
 tags:
@@ -31,6 +31,12 @@ toc: true
 - [Hugo](https://gohugo.io/) - 静态网站生成器
 - [Bolo](https://github.com/yourname/bolo) - Hugo 主题
 - [MDUI](https://www.mdui.org/) - Material Design UI 框架
+
+### 图片展示
+
+![示例图片](/images/cover2.jpg)
+
+这是一张示例图片，展示了如何在文章中插入图片。
 
 ### 代码示例
 
