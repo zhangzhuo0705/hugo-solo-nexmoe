@@ -249,7 +249,7 @@ jobs:
 - [ ] **Step 3: Validate workflow structure**
 
 ~~~bash
-ruby -e 'require "yaml"; YAML.load_file(".github/workflows/pages.yml", aliases: true); puts "valid YAML"'
+python3 -c 'import yaml; yaml.safe_load(open(".github/workflows/pages.yml")); print("valid YAML")'
 rg -n 'actions/configure-pages@v5|actions/upload-pages-artifact@v4|actions/deploy-pages@v4|pages: write|id-token: write' .github/workflows/pages.yml
 ~~~
 
