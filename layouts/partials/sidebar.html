@@ -1,7 +1,7 @@
 <div id="nexmoe-header">
     <div class="nexmoe-drawer mdui-drawer" id="drawer">
         <div class="nexmoe-avatar mdui-ripple">
-            <a href="{{ "/" | relURL }}" title="{{ .Site.Title }}">
+            <a href="{{ "" | relURL }}" title="{{ .Site.Title }}">
                 <img src="{{ .Site.Params.avatar | default "avatar.png" | relURL }}" title="{{ .Site.Title }}" alt="{{ .Site.Title }}">
             </a>
         </div>
@@ -16,7 +16,7 @@
         {{ partial "nav.html" . }}
         {{ partial "widgets.html" . }}
         <div class="nexmoe-copyright">
-            © {{ now.Year }} <a href="{{ "/" | relURL }}">{{ .Site.Title }}</a><br>
+            © {{ now.Year }} <a href="{{ "" | relURL }}">{{ .Site.Title }}</a><br>
             Powered by <a href="https://gohugo.io" target="_blank">Hugo</a><br>
             Theme <a rel="friend" href="https://github.com/yourname/bolo" target="_blank">bolo</a>
         </div>

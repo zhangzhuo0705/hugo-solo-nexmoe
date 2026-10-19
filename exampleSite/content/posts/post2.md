@@ -1,7 +1,7 @@
 ---
 title: "Python数据分析入门指南"
 date: 2024-05-10
-cover: "/images/post2.jpg"
+cover: "images/post2.jpg"
 categories: ["技术文章"]
 tags: ["Python", "数据分析"]
 views: 189

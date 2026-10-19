@@ -3,7 +3,7 @@ title: "你好世界"
 date: 2024-01-15T10:00:00+08:00
 draft: false
 description: "这是我的第一篇博客文章"
-cover: "/images/cover1.jpg"
+cover: "images/cover1.jpg"
 categories:
   - 随笔
 tags:

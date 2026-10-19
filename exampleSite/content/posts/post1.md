@@ -1,7 +1,7 @@
 ---
 title: "使用JavaScript实现瀑布流布局"
 date: 2024-05-12
-cover: "/images/post1.jpg"
+cover: "images/post1.jpg"
 categories: ["技术文章"]
 tags: ["JavaScript", "前端"]
 views: 256

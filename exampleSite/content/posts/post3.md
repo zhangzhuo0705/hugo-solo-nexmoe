@@ -1,7 +1,7 @@
 ---
 title: "周末爬山记"
 date: 2024-05-06
-cover: "/images/post3.jpg"
+cover: "images/post3.jpg"
 categories: ["生活随笔"]
 tags: ["生活"]
 views: 98
