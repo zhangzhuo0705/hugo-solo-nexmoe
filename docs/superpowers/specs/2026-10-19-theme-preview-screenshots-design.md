@@ -19,22 +19,23 @@ mockups, watermarks, and added labels are excluded.
 
 ## Output Files
 
-Create one native desktop capture and one proportional derivative:
+Create two desktop-layout captures with different virtual viewports:
 
 - `images/screenshot.png`: 1500 × 1000 pixels
-- `images/tn.png`: 900 × 600 pixels, resized from the desktop capture
+- `images/tn.png`: 900 × 600 pixels, rendered from an 1800 × 1200 virtual viewport at a 0.5 device scale factor
 
-Both files use the required 3:2 aspect ratio. The thumbnail is downscaled from
-the complete 1500 × 1000 desktop screenshot so it retains the sidebar, avatar,
-and first two article cards instead of switching to the narrower responsive
-layout and showing only the first article.
+Both files use the required 3:2 aspect ratio. The larger virtual viewport keeps
+the desktop sidebar, avatar, and readable article cards while fitting the first
+two complete posts and the beginning of the third into the thumbnail. It avoids
+both the mobile single-card framing and the illegible whole-page overview.
 
 ## Capture Method
 
-Use an installed headless Chromium-compatible browser to capture the page at
-1500 × 1000. Disable browser chrome, wait for network activity to settle, and
-allow time for the Canvas background and lazy-loaded images. Use ImageMagick to
-resize that PNG proportionally to 900 × 600 without cropping or distortion.
+Use an installed headless Chromium-compatible browser for both captures. The
+main image uses a 1500 × 1000 viewport at device scale 1. The thumbnail uses an
+1800 × 1200 virtual viewport at device scale 0.5, producing a 900 × 600 PNG
+while retaining desktop layout. Both captures wait for the Canvas background
+and lazy-loaded images and exclude browser chrome.
 
 If the online page cannot be captured reliably, build and serve the same commit
 locally with the production base URL shape, then use the local server. Do not
