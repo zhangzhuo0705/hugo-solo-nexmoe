@@ -4,7 +4,6 @@ date: 2024-05-12
 cover: "images/post1.jpg"
 categories: ["技术文章"]
 tags: ["JavaScript", "前端"]
-views: 256
 ---
 
 ## 前言

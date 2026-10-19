@@ -4,7 +4,6 @@ date: 2024-05-10
 cover: "images/post2.jpg"
 categories: ["技术文章"]
 tags: ["Python", "数据分析"]
-views: 189
 ---
 
 从零开始学习Python数据分析，涵盖pandas、numpy、matplotlib等核心库的使用。

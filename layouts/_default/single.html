@@ -119,9 +119,6 @@ function toggleToc() {
         <span>
             <i class="nexmoefont iconfont solo-calendarl"></i>{{ .Date.Format "2006-01-02" }}{{ with .Lastmod }}/{{ .Format "2006-01-02" }}{{ end }}
         </span>
-        <span>
-            <i class="nexmoefont iconfont solo-heat"></i>{{ .Params.views | default 0 }} 浏览
-        </span>
         {{ with .Params.categories }}
         {{ range first 1 . }}
         <span>

@@ -4,7 +4,6 @@ date: 2024-05-06
 cover: "images/post3.jpg"
 categories: ["生活随笔"]
 tags: ["生活"]
-views: 98
 ---
 
 周末和朋友一起去爬山，风景很美，空气清新，是一次不错的户外体验。
