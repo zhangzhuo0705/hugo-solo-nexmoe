@@ -109,7 +109,7 @@ function toggleToc() {
 <div class="nexmoe-post">
     <div class="nexmoe-post-cover">
         {{ with .Params.cover }}
-        <img referrerpolicy="origin" src="{{ . }}" alt="{{ $.Title }}" class="lazyload">
+        <img referrerpolicy="origin" src="{{ . | relURL }}" alt="{{ $.Title }}" class="lazyload">
         {{ else }}
         <img referrerpolicy="origin" src="{{ "images/default-cover.jpg" | relURL }}" alt="{{ .Title }}" class="lazyload">
         {{ end }}
