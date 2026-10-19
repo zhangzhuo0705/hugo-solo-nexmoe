@@ -1,10 +1,10 @@
-baseURL = "https://example.org/"
-languageCode = "zh-cn"
-title = "示例博客"
-theme = "bolo"
+baseURL = "https://zhangzhuo0705.github.io/hugo-solo-nexmoe/"
+locale = "zh-cn"
+title = "Hugo Solo Nexmoe 示例博客"
+theme = "hugo-solo-nexmoe"
 
 [params]
-  avatar = "/images/avatar.png"
+  avatar = "images/avatar.png"
   hitokoto = "生活不止眼前的代码，还有诗和远方。"
   
   [[params.social]]
