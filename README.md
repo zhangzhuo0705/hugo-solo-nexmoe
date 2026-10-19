@@ -1,6 +1,6 @@
-# Bolo Hugo Theme
+# Hugo Solo Nexmoe
 
-![License](https://img.shields.io/github/license/yourname/bolo)
+![License](https://img.shields.io/github/license/zhangzhuo0705/hugo-solo-nexmoe)
 ![Hugo Minimum Version](https://img.shields.io/badge/hugo-%3E%3D0.80.0-blue)
 
 一个从 solo-nexmoe 静态网站转换而来的 Hugo 博客主题，采用 MDUI 框架，具有响应式设计，适合技术博客和个人网站。
@@ -29,7 +29,7 @@
 ```bash
 # 在你的 Hugo 站点目录下
 git init
-git submodule add https://github.com/zhangzhuo0705/hugo-solo-nexmoe.git themes/bolo
+git submodule add https://github.com/zhangzhuo0705/hugo-solo-nexmoe.git themes/hugo-solo-nexmoe
 ```
 
 ### 配置
@@ -37,9 +37,9 @@ git submodule add https://github.com/zhangzhuo0705/hugo-solo-nexmoe.git themes/b
 在 `hugo.toml` 中设置主题：
 
 ```toml
-cp themes/bolo/archetypes/archives.md themes/bolo/archetypes/links.md content/
+cp themes/hugo-solo-nexmoe/archetypes/archives.md themes/hugo-solo-nexmoe/archetypes/links.md content/
 
-cp themes/bolo/exampleSite/config.toml hugo.toml
+cp themes/hugo-solo-nexmoe/exampleSite/hugo.toml hugo.toml
 ```
 
 ### 运行
@@ -54,16 +54,16 @@ hugo server -D
 
 ```toml
 baseURL = "https://example.org/"
-languageCode = "zh-cn"
+locale = "zh-cn"
 title = "你的博客标题"
-theme = "bolo"
+theme = "hugo-solo-nexmoe"
 ```
 
 ### 参数配置
 
 | 参数 | 类型 | 必填 | 说明 | 示例 |
 |------|------|------|------|------|
-| `avatar` | string | 否 | 头像图片路径 | `/images/avatar.png` |
+| `avatar` | string | 否 | 头像图片路径 | `images/avatar.png` |
 | `hitokoto` | string | 否 | 一言/签名文字 | `生活不止眼前的代码，还有诗和远方。` |
 
 ### 社交链接
@@ -71,7 +71,7 @@ theme = "bolo"
 ```toml
 [[params.social]]
   name = "GitHub"
-  url = "https://github.com/yourname"
+  url = "https://github.com/zhangzhuo0705"
   icon = "solo-github"
 
 [[params.social]]
@@ -131,7 +131,7 @@ title: "文章标题"
 date: 2024-01-01
 draft: false
 description: "文章描述"
-cover: "/images/cover.jpg"  # 封面图
+cover: "images/cover.jpg"  # 封面图
 categories: ["分类"]
 tags: ["标签1", "标签2"]
 toc: true  # 是否显示目录
@@ -152,10 +152,10 @@ hugo new page/archives.md
 
 ```bash
 # 克隆主题仓库
-git clone https://github.com/yourname/bolo.git
+git clone https://github.com/zhangzhuo0705/hugo-solo-nexmoe.git
 
 # 进入示例站点
-cd bolo/exampleSite
+cd hugo-solo-nexmoe/exampleSite
 
 # 启动开发服务器
 hugo server --themesDir ../..

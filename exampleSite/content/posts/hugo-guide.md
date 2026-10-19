@@ -47,8 +47,8 @@ cd myblog
 
 ```bash
 git init
-git submodule add https://github.com/yourname/bolo themes/bolo
-echo 'theme = "bolo"' >> hugo.toml
+git submodule add https://github.com/zhangzhuo0705/hugo-solo-nexmoe themes/hugo-solo-nexmoe
+echo 'theme = "hugo-solo-nexmoe"' >> hugo.toml
 ```
 
 ## 创建内容
@@ -73,4 +73,4 @@ hugo
 
 ## 配置说明
 
-详细配置请参考主题的 [README.md](https://github.com/yourname/bolo#readme)
+详细配置请参考主题的 [README.md](https://github.com/zhangzhuo0705/hugo-solo-nexmoe#readme)

@@ -1,6 +1,6 @@
-# Contributing to Bolo
+# Contributing to Hugo Solo Nexmoe
 
-感谢你对 Bolo Hugo 主题的关注和贡献！
+感谢你对 Hugo Solo Nexmoe 主题的关注和贡献！
 
 ## 如何贡献
 
@@ -43,10 +43,10 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourname/bolo.git
+git clone https://github.com/zhangzhuo0705/hugo-solo-nexmoe.git
 
 # 进入示例站点目录
-cd bolo/exampleSite
+cd hugo-solo-nexmoe/exampleSite
 
 # 启动 Hugo 开发服务器
 hugo server --themesDir ../..

@@ -29,12 +29,12 @@ toc: true
 这个博客使用以下技术构建：
 
 - [Hugo](https://gohugo.io/) - 静态网站生成器
-- [Bolo](https://github.com/yourname/bolo) - Hugo 主题
+- [Hugo Solo Nexmoe](https://github.com/zhangzhuo0705/hugo-solo-nexmoe) - Hugo 主题
 - [MDUI](https://www.mdui.org/) - Material Design UI 框架
 
 ### 图片展示
 
-![示例图片](/images/cover2.jpg)
+![示例图片](../../images/cover2.jpg)
 
 这是一张示例图片，展示了如何在文章中插入图片。
 

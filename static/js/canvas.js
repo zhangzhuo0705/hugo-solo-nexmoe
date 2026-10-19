@@ -1,5 +1,5 @@
 /*
- * Bolo - A stable and beautiful blogging system based in Solo.
+ * Hugo Solo Nexmoe - A Hugo theme converted from solo-nexmoe.
  * Canvas background animation - static demo version
  */
 !function() {
