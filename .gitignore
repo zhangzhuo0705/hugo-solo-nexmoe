@@ -27,3 +27,6 @@ package-lock.json
 # ExampleSite build
 exampleSite/public/
 exampleSite/resources/
+
+# Local design previews
+.superpowers/
