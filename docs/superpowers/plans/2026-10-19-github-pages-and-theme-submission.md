@@ -215,10 +215,10 @@ jobs:
           wget -O "\${{ runner.temp }}/hugo.deb" "https://github.com/gohugoio/hugo/releases/download/v\${HUGO_VERSION}/hugo_extended_\${HUGO_VERSION}_linux-amd64.deb"
           sudo dpkg -i "\${{ runner.temp }}/hugo.deb"
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Configure Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Build demo
         env:
           HUGO_CACHEDIR: \${{ runner.temp }}/hugo_cache
@@ -243,14 +243,14 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 ~~~
 
 - [ ] **Step 3: Validate workflow structure**
 
 ~~~bash
 python3 -c 'import yaml; yaml.safe_load(open(".github/workflows/pages.yml")); print("valid YAML")'
-rg -n 'actions/configure-pages@v5|actions/upload-pages-artifact@v4|actions/deploy-pages@v4|pages: write|id-token: write' .github/workflows/pages.yml
+rg -n 'actions/configure-pages@v6|actions/upload-pages-artifact@v4|actions/deploy-pages@v5|pages: write|id-token: write' .github/workflows/pages.yml
 ~~~
 
 Expected: \`valid YAML\` and all required actions and permissions.
