@@ -6,7 +6,7 @@ homepage = "https://github.com/zhangzhuo0705/hugo-solo-nexmoe"
 demosite = "https://zhangzhuo0705.github.io/hugo-solo-nexmoe/"
 tags = ["blog", "responsive", "mdui", "nexmoe", "minimal", "chinese"]
 features = ["blog", "archives", "tags", "categories", "social-links", "friend-links", "toc", "pagination", "canvas-animation"]
-min_version = "0.80.0"
+min_version = "0.128.0"
 
 [author]
   name = "zhangzhuo0705"
