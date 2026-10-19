@@ -4,7 +4,7 @@
 
 **Goal:** Replace both theme preview PNGs with current, PR-compliant native-viewport captures of the deployed example site.
 
-**Architecture:** Use installed headless Google Chrome to capture the live home page directly at the two required viewports. Wait five seconds of virtual time for lazy images, the external avatar, fonts, and Canvas initialization, then validate dimensions and inspect both images before committing.
+**Architecture:** Use installed headless Google Chrome to capture the live home page at 1500 × 1000, then proportionally resize that complete desktop composition to 900 × 600. Wait five seconds of virtual time for lazy images, the external avatar, fonts, and Canvas initialization, then validate dimensions and inspect both images before committing.
 
 **Tech Stack:** Google Chrome headless mode, ImageMagick `identify`, Hugo demo on GitHub Pages, Git.
 
@@ -13,7 +13,7 @@
 ## File Structure
 
 - Replace `images/screenshot.png` with a 1500 × 1000 desktop capture.
-- Replace `images/tn.png` with an independent 900 × 600 responsive capture.
+- Replace `images/tn.png` with a 900 × 600 proportional copy of the complete desktop capture.
 - Do not create scripts or retain Chrome profile/cache data in the repository.
 
 ### Task 1: Capture the current deployed homepage
@@ -65,26 +65,15 @@ google-chrome \
 
 Expected: Chrome exits successfully and writes a page-only PNG without browser chrome.
 
-- [ ] **Step 4: Capture the independent 900 × 600 thumbnail**
+- [ ] **Step 4: Resize the complete desktop capture to 900 × 600**
 
 Run:
 
 ```bash
-preview_profile_small="$(mktemp -d /tmp/hugo-preview-small.XXXXXX)"
-google-chrome \
-  --headless=new \
-  --no-sandbox \
-  --disable-gpu \
-  --hide-scrollbars \
-  --force-device-scale-factor=1 \
-  --window-size=900,600 \
-  --virtual-time-budget=5000 \
-  --user-data-dir="$preview_profile_small" \
-  --screenshot="$(pwd)/images/tn.png" \
-  "https://zhangzhuo0705.github.io/hugo-solo-nexmoe/"
+convert images/screenshot.png -filter Lanczos -resize 900x600 images/tn.png
 ```
 
-Expected: Chrome exits successfully and writes a second page-only PNG rendered at the responsive 900-pixel viewport.
+Expected: ImageMagick writes a 900 × 600 PNG with the same complete composition as the desktop screenshot.
 
 - [ ] **Step 5: Validate format, dimensions, aspect ratio, and README reference**
 
@@ -102,7 +91,7 @@ Expected: every command exits with status 0.
 
 - [ ] **Step 6: Inspect both images visually**
 
-Open `images/screenshot.png` and `images/tn.png` at original detail. Confirm they show the current avatar, landscape cover for `从零搭建一个 Hugo 博客`, current article metadata, and theme navigation; contain no placeholder color blocks, old article titles, browser chrome, clipping, or loading failures; and represent the appropriate desktop and responsive layouts.
+Open `images/screenshot.png` and `images/tn.png` at original detail. Confirm both show the current avatar, sidebar, landscape covers, first two article cards, current metadata, and theme navigation; and contain no placeholder blocks, old titles, browser chrome, clipping, distortion, or loading failures.
 
 - [ ] **Step 7: Review and commit the focused diff**
 

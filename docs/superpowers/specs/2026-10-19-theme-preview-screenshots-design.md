@@ -19,24 +19,22 @@ mockups, watermarks, and added labels are excluded.
 
 ## Output Files
 
-Create two independent native-viewport PNG captures:
+Create one native desktop capture and one proportional derivative:
 
 - `images/screenshot.png`: 1500 × 1000 pixels
-- `images/tn.png`: 900 × 600 pixels
+- `images/tn.png`: 900 × 600 pixels, resized from the desktop capture
 
-Both files use the required 3:2 aspect ratio. The thumbnail is captured at its
-own 900 × 600 viewport instead of being downscaled from the desktop screenshot,
-so it represents the theme's actual layout at that width and keeps text as
-readable as possible.
+Both files use the required 3:2 aspect ratio. The thumbnail is downscaled from
+the complete 1500 × 1000 desktop screenshot so it retains the sidebar, avatar,
+and first two article cards instead of switching to the narrower responsive
+layout and showing only the first article.
 
 ## Capture Method
 
-Use an installed headless Chromium-compatible browser through Playwright or an
-equivalent screenshot tool. Set the exact viewport before navigation, disable
-browser chrome by using page-level screenshots, wait for network activity to
-settle, then verify all visible images report `complete` with a non-zero natural
-width. Add a short stabilization delay for the Canvas background and lazy-loaded
-cover images before writing the PNG.
+Use an installed headless Chromium-compatible browser to capture the page at
+1500 × 1000. Disable browser chrome, wait for network activity to settle, and
+allow time for the Canvas background and lazy-loaded images. Use ImageMagick to
+resize that PNG proportionally to 900 × 600 without cropping or distortion.
 
 If the online page cannot be captured reliably, build and serve the same commit
 locally with the production base URL shape, then use the local server. Do not
