@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- GitHub Actions workflow for deploying the example site to GitHub Pages
+- Locally stored CC0 landscape photography with source documentation
+- Five complete example articles covering Hugo, theme configuration, JavaScript, Python, and personal writing
+
+### Changed
+- Updated the demo avatar and replaced placeholder imagery
+- Rewrote the README and contribution guide to match current configuration and development commands
+- Raised the declared minimum Hugo version to 0.128.0
+- Updated the theme screenshot to the required 3:2 aspect ratio
+
+### Fixed
+- Preserved the GitHub Pages project prefix in theme assets, post covers, and internal links
+- Removed unsupported article view-count output and sample metadata
+
 ## [1.0.0] - 2024-01-01
 
 ### Added
