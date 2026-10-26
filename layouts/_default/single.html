@@ -122,7 +122,7 @@ function toggleToc() {
         {{ with .Params.categories }}
         {{ range first 1 . }}
         <span>
-            <i class="nexomefont iconfont solo-category"></i>{{ . }}
+            {{ partial "icon-category.html" . }}{{ . }}
         </span>
         {{ end }}
         {{ end }}

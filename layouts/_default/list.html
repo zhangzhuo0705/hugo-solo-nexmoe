@@ -18,7 +18,7 @@
             <span><i class="nexmoefont iconfont solo-calendarl"></i>{{ .Date.Format "2006年01月02日" }}</span>
             {{ with .Params.categories }}
             {{ range first 1 . }}
-            <span><a class="nexmoefont iconfont solo-category" href="{{ (site.GetPage (printf "/categories/%s" .)).Permalink }}">{{ . }}</a></span>
+            <span><a class="nexmoefont" href="{{ (site.GetPage (printf "/categories/%s" .)).Permalink }}">{{ partial "icon-category.html" . }}{{ . }}</a></span>
             {{ end }}
             {{ end }}
             {{ range .Params.tags }}
