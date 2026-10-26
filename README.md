@@ -60,6 +60,7 @@ theme = "hugo-solo-nexmoe"
   mainSections = ["posts"]
   avatar = "images/avatar.jpg"
   hitokoto = "认真记录，持续成长。"
+  tagCloudLimit = 10
 
 [[params.social]]
   name = "GitHub"
@@ -86,9 +87,16 @@ theme = "hugo-solo-nexmoe"
     icon = "solo-about"
 
 [[menu.main]]
+  name = "标签"
+  url = "/tags/"
+  weight = 3
+  [menu.main.params]
+    icon = "solo-tags"
+
+[[menu.main]]
   name = "时间线"
   url = "/archives/"
-  weight = 3
+  weight = 4
   [menu.main.params]
     icon = "solo-list"
 
