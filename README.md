@@ -127,6 +127,7 @@ cp themes/hugo-solo-nexmoe/archetypes/archives.md content/archives.md
 | `params.avatar` | string | `avatar.png` | 本地站点路径或完整 HTTPS 地址 |
 | `params.hitokoto` | string | 内置中文句子 | 页面底部的一言文字 |
 | `params.footer` | string (HTML) | 主题内置版权信息 | 自定义侧栏页脚，支持 HTML；不设置时使用默认内容 |
+| `params.footerFilings` | array | 空 | 版权行下方的备案信息，每项支持 `text` 与 `url`；不配置则不显示 |
 | `pagination.pagerSize` | integer | `10` | 每页文章数量 |
 
 页脚示例：
@@ -134,6 +135,14 @@ cp themes/hugo-solo-nexmoe/archetypes/archives.md content/archives.md
 ```toml
 [params]
   footer = '© 2026 <a href="https://example.com">Your Name</a> · Powered by <a href="https://gohugo.io">Hugo</a>'
+```
+
+备案信息示例（仅在未设置 `params.footer` 时显示）：
+
+```toml
+[[params.footerFilings]]
+  text = "蒙ICP备2020004404号-1"
+  url = "https://beian.miit.gov.cn/"
 ```
 
 ### 社交链接

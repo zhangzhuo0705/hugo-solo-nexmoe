@@ -20,6 +20,9 @@
             {{ . | safeHTML }}
             {{ else }}
             © {{ now.Year }} <a href="{{ "" | relURL }}">{{ .Site.Title }}</a><br>
+            {{ range .Site.Params.footerFilings }}
+            <p>{{ if .url }}<a href="{{ .url }}" rel="noopener nofollow" target="_blank">{{ .text }}</a>{{ else }}{{ .text }}{{ end }}</p>
+            {{ end }}
             Powered by <a href="https://gohugo.io" target="_blank">Hugo</a><br>
             Theme <a rel="friend" href="https://github.com/zhangzhuo0705/hugo-solo-nexmoe" target="_blank">Hugo Solo Nexmoe</a>
             {{ end }}
