@@ -132,7 +132,7 @@ theme = "hugo-solo-nexmoe"
 | 参数 | 作用 | 默认/示例 |
 | --- | --- | --- |
 | `params.mainSections` | 首页展示的内容分区 | `["posts"]`，需与 `content/posts` 对应；使用其他目录时同步修改 |
-| `params.avatar` | 侧栏头像 | 本地路径相对 `static/`，如 `images/avatar.jpg`；也可填完整 HTTPS 地址 |
+| `params.avatar` | 侧栏头像 | 本地路径相对 `static/`，如 `images/avatar.jpg`；也可填完整 HTTPS 地址；建议显式设置并确保文件存在 |
 | `params.hitokoto` | 侧栏底部的一言文字 | 任意字符串 |
 | `params.tagCloudLimit` | 侧栏标签云展示数量 | 默认 `10`，按文章数取前 N 个；完整标签仍在 `/tags/` |
 
@@ -162,7 +162,7 @@ theme = "hugo-solo-nexmoe"
 ```
 
 - 这里的 `params.links` 是 `/links/` 友情链接页的数据，不会出现在侧栏。
-- `avatar` 可换成 `logo`；未设置时使用默认图标路径。
+- `avatar` 可换成 `logo`；建议至少设置一个；未设置时会回退到 `images/default-avatar.png`，需确保该文件存在。
 - 图片可以是 `static/` 下的本地路径，也可以是完整 HTTPS 地址。
 
 ### 菜单
@@ -230,7 +230,7 @@ cp themes/hugo-solo-nexmoe/archetypes/links.md content/links.md
 | 参数 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
 | `params.mainSections` | string array | Hugo 自动推断 | 首页展示的内容分区，推荐设为 `["posts"]` |
-| `params.avatar` | string | `avatar.png` | 本地站点路径或完整 HTTPS 地址 |
+| `params.avatar` | string | `avatar.png`（需自行提供） | 本地站点路径或完整 HTTPS 地址；建议显式设置 |
 | `params.hitokoto` | string | 内置中文句子 | 页面底部的一言文字 |
 | `params.footer` | string (HTML) | 主题内置版权信息 | 自定义侧栏页脚，支持 HTML；设置后完整替换默认页脚 |
 | `params.footerFilings` | array | 空 | 版权行下方的备案信息，每项支持 `text` 与 `url`；仅默认页脚生效 |
@@ -267,7 +267,7 @@ cp themes/hugo-solo-nexmoe/archetypes/links.md content/links.md
 
 ### 友情链接
 
-`params.links` 每项支持 `name`、`url` 和 `avatar`。图片字段也兼容 `logo`；未设置时使用默认图标路径。
+`params.links` 每项支持 `name`、`url` 和 `avatar`。图片字段也兼容 `logo`；建议至少设置一个；未设置时会回退到 `images/default-avatar.png`，需确保该文件存在。
 
 ### 菜单
 
