@@ -15,7 +15,9 @@
 - 响应式文章列表和文章页
 - MDUI 视觉样式与 Canvas 背景
 - 浮动文章目录
-- 分类、标签和归档时间线
+- 分类、标签、标签云和归档时间线
+- 标签/分类筛选页同时展示文章分类与标签
+- 可配置页脚、备案信息和分类文件夹图标
 - 友情链接和社交按钮
 - 首页及列表分页
 - 图片懒加载和默认封面
@@ -125,6 +127,18 @@ cp themes/hugo-solo-nexmoe/archetypes/archives.md content/archives.md
 
 主题根据 front matter 的 `layout` 生成 `/links/` 和 `/archives/`。
 
+## 标签页
+
+`/tags/` 由 Hugo taxonomy 自动生成，使用标签云样式。创建 `content/tags/_index.md` 可设置页面标题：
+
+```yaml
+---
+title: "标签"
+---
+```
+
+侧栏标签云默认只展示文章数最多的前 10 个标签，可通过 `params.tagCloudLimit` 调整；完整标签列表始终在 `/tags/` 页面展示。
+
 ## 配置参考
 
 ### 站点参数
@@ -134,8 +148,8 @@ cp themes/hugo-solo-nexmoe/archetypes/archives.md content/archives.md
 | `params.mainSections` | string array | Hugo 自动推断 | 首页展示的内容分区，推荐设为 `["posts"]` |
 | `params.avatar` | string | `avatar.png` | 本地站点路径或完整 HTTPS 地址 |
 | `params.hitokoto` | string | 内置中文句子 | 页面底部的一言文字 |
-| `params.footer` | string (HTML) | 主题内置版权信息 | 自定义侧栏页脚，支持 HTML；不设置时使用默认内容 |
-| `params.footerFilings` | array | 空 | 版权行下方的备案信息，每项支持 `text` 与 `url`；不配置则不显示 |
+| `params.footer` | string (HTML) | 主题内置版权信息 | 自定义侧栏页脚，支持 HTML；设置后完整替换默认页脚 |
+| `params.footerFilings` | array | 空 | 版权行下方的备案信息，每项支持 `text` 与 `url`；仅默认页脚生效 |
 | `params.tagCloudLimit` | integer | `10` | 侧栏标签云展示的热门标签数量 |
 | `pagination.pagerSize` | integer | `10` | 每页文章数量 |
 
@@ -146,12 +160,18 @@ cp themes/hugo-solo-nexmoe/archetypes/archives.md content/archives.md
   footer = '© 2026 <a href="https://example.com">Your Name</a> · Powered by <a href="https://gohugo.io">Hugo</a>'
 ```
 
+注意：设置 `params.footer` 后会完整替换默认页脚，`params.footerFilings` 不再显示。
+
 备案信息示例（仅在未设置 `params.footer` 时显示）：
 
 ```toml
 [[params.footerFilings]]
   text = "蒙ICP备2020004404号-1"
   url = "https://beian.miit.gov.cn/"
+
+[[params.footerFilings]]
+  text = "蒙公网安备 15022102000024号"
+  url = "https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=15022102000024"
 ```
 
 ### 社交链接
@@ -167,7 +187,7 @@ cp themes/hugo-solo-nexmoe/archetypes/archives.md content/archives.md
 
 ### 菜单
 
-导航读取 `menu.main`。`weight` 控制顺序，`menu.main.params.icon` 指定主题图标类名。
+导航读取 `menu.main`。`weight` 控制顺序，`menu.main.params.icon` 指定主题图标类名。示例配置包含首页、友情链接、标签和时间线；标签菜单使用 `solo-tags` 图标。
 
 ## 创建文章
 
@@ -203,6 +223,8 @@ hugo server -D
 ```bash
 hugo server --source exampleSite --themesDir ../.. --theme hugo-solo-nexmoe
 ```
+
+示例站点包含首页、标签页、分类页、归档、友情链接和文章页。
 
 生产构建：
 

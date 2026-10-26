@@ -11,16 +11,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Actions workflow for deploying the example site to GitHub Pages
 - Locally stored CC0 landscape photography with source documentation
 - Five complete example articles covering Hugo, theme configuration, JavaScript, Python, and personal writing
+- Configurable sidebar footer through `params.footer`
+- Optional footer filing links through `params.footerFilings`
+- Configurable sidebar tag cloud limit through `params.tagCloudLimit`
+- Tags menu entry and Chinese section title in the example site
+- Inline SVG folder icon for category badges
 
 ### Changed
 - Updated the demo avatar and replaced placeholder imagery
 - Rewrote the README and contribution guide to match current configuration and development commands
 - Raised the declared minimum Hugo version to 0.128.0
 - Updated the theme screenshot to the required 3:2 aspect ratio
+- Rendered the tags page with the tagcloud layout instead of a custom pill list
+- Limited the sidebar tag cloud to the 10 most-used tags
+- Show category and tags together on tag and category term cards
 
 ### Fixed
 - Preserved the GitHub Pages project prefix in theme assets, post covers, and internal links
 - Removed unsupported article view-count output and sample metadata
+- Resolved taxonomy page lookups when a term shares a name with another page
+- Kept Chinese tag and category links non-empty
+- Added the missing category badge and icon on tag and category term cards
 
 ## [1.0.0] - 2024-01-01
 
