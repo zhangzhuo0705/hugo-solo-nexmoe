@@ -35,9 +35,11 @@
     <div class="nexmoe-widget-wrap">
         <h3 class="nexmoe-widget-title">标签</h3>
         <div class="nexmoe-widget tagcloud">
-            {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-            {{ $tag := $.Site.GetPage (printf "/tags/%s" $name) }}
-            <a href="{{ $tag.Permalink }}" class="mdui-ripple">{{ $name }}</a>
+            {{ $limit := .Site.Params.tagCloudLimit | default 10 }}
+            {{ range first $limit .Site.Taxonomies.tags.ByCount }}
+            {{ with .Page }}
+            <a href="{{ .Permalink }}" class="mdui-ripple">{{ .Data.Term }}</a>
+            {{ end }}
             {{ end }}
         </div>
     </div>
