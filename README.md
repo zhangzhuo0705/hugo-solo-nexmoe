@@ -118,6 +118,91 @@ theme = "hugo-solo-nexmoe"
 
 把本地头像保存为 `static/images/avatar.jpg`；`avatar` 也可以填写完整的 HTTPS 地址。
 
+### 基础字段
+
+| 字段 | 作用 | 注意事项 |
+| --- | --- | --- |
+| `baseURL` | 站点部署根地址 | 必须以 `/` 结尾；GitHub Pages 项目页要包含仓库名，例如 `https://name.github.io/repo/`。主题资源和内部链接依赖它 |
+| `locale` | 站点区域设置 | 中文站点设为 `zh-cn`；多语言站点改用 `defaultContentLanguage` 与 `[languages]` |
+| `title` | 站点标题 | 用于浏览器标题、侧栏和版权信息 |
+| `theme` | 主题目录名 | 必须与 `themes/hugo-solo-nexmoe` 的目录名一致 |
+
+### params
+
+| 参数 | 作用 | 默认/示例 |
+| --- | --- | --- |
+| `params.mainSections` | 首页展示的内容分区 | `["posts"]`，需与 `content/posts` 对应；使用其他目录时同步修改 |
+| `params.avatar` | 侧栏头像 | 本地路径相对 `static/`，如 `images/avatar.jpg`；也可填完整 HTTPS 地址 |
+| `params.hitokoto` | 侧栏底部的一言文字 | 任意字符串 |
+| `params.tagCloudLimit` | 侧栏标签云展示数量 | 默认 `10`，按文章数取前 N 个；完整标签仍在 `/tags/` |
+
+`params.social`、`params.links` 和菜单配置都是可选项，不需要时整段删除即可。
+
+### 社交按钮
+
+```toml
+[[params.social]]
+  name = "GitHub"
+  url = "https://github.com/your-name"
+  icon = "solo-github"
+```
+
+- `name`：按钮标题。
+- `icon`：主题图标类名，常用 `solo-github`、`solo-wechat` 等。
+- `url`：点击后在新标签页打开。
+- `value`：与 `url` 二选一；点击弹窗显示并允许复制，适合微信号等信息。
+
+### 友情链接
+
+```toml
+[[params.links]]
+  name = "Hugo"
+  url = "https://gohugo.io/"
+  avatar = "https://gohugo.io/favicon.ico"
+```
+
+- 这里的 `params.links` 是 `/links/` 友情链接页的数据，不会出现在侧栏。
+- `avatar` 可换成 `logo`；未设置时使用默认图标路径。
+- 图片可以是 `static/` 下的本地路径，也可以是完整 HTTPS 地址。
+
+### 菜单
+
+```toml
+[[menu.main]]
+  name = "标签"
+  url = "/tags/"
+  weight = 3
+  [menu.main.params]
+    icon = "solo-tags"
+```
+
+- `weight` 控制顺序，数字越小越靠前。
+- `icon` 使用主题图标类：首页 `solo-home`、友情链接 `solo-about`、标签 `solo-tags`、时间线 `solo-list`。
+- `/tags/` 由 taxonomy 自动生成；`/links/`、`/archives/` 由主题自带内容生成，通常不需要再创建文件。
+- 未设置 `icon` 时默认为 `solo-home`。
+
+### 分类、分页和目录
+
+```toml
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[pagination]
+  pagerSize = 10
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+```
+
+- `taxonomies`：右侧是 URL 和文章 front matter 使用的键。修改后要同步菜单、模板和已有文章的 `tags`/`categories`。
+- `pagination.pagerSize`：列表页每页文章数。
+- `markup.tableOfContents`：浮动目录的标题级别范围；文章可用 `toc: false` 单独关闭。
+- `params.footer`、`params.footerFilings` 等可选页脚配置见下方“配置参考”。
+
 ## 特殊页面
 
 主题自带以下内容文件，安装后页面直接可用，不需要手动复制：

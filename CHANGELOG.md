@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rewrote the README and contribution guide to match current configuration and development commands
 - Raised the declared minimum Hugo version to 0.128.0
 - Updated the theme screenshot to the required 3:2 aspect ratio
+- Expanded the README minimal configuration section with field-by-field guidance
 - Rendered the tags page with the tagcloud layout instead of a custom pill list
 - Limited the sidebar tag cloud to the 10 most-used tags
 - Show category and tags together on tag and category term cards
