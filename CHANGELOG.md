@@ -30,6 +30,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Limited the sidebar tag cloud to the 10 most-used tags
 - Show category and tags together on tag and category term cards
 
+### Removed
+- Redundant `archetypes/links.md` and `archetypes/archives.md`; the theme now ships the corresponding content files
+
 ### Fixed
 - Preserved the GitHub Pages project prefix in theme assets, post covers, and internal links
 - Removed unsupported article view-count output and sample metadata

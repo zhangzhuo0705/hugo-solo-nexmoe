@@ -216,7 +216,7 @@ theme = "hugo-solo-nexmoe"
 Hugo 会自动挂载主题的 `content/`。站点中同路径文件优先级更高，可用于覆盖标题或布局，例如自定义友情链接页：
 
 ```bash
-cp themes/hugo-solo-nexmoe/archetypes/links.md content/links.md
+cp themes/hugo-solo-nexmoe/content/links.md content/links.md
 ```
 
 `/links/` 和 `/archives/` 本质是普通内容页 + `layout` 指定特殊布局，不是 taxonomy。标签页 `/tags/` 由 Hugo taxonomy 自动生成，`_index.md` 只覆盖标题，不负责创建路由。

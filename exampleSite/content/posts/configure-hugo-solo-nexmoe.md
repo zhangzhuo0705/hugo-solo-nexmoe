@@ -78,12 +78,7 @@ theme = "hugo-solo-nexmoe"
 
 ## 友情链接
 
-先创建特殊页面：
-
-```bash
-cp themes/hugo-solo-nexmoe/archetypes/links.md content/links.md
-cp themes/hugo-solo-nexmoe/archetypes/archives.md content/archives.md
-```
+主题自带 `/links/` 和 `/archives/` 页面，无需手动创建。站点中同路径文件会覆盖主题内容，如需自定义标题或布局，可创建 `content/links.md` / `content/archives.md`。
 
 再添加链接数据：
 
