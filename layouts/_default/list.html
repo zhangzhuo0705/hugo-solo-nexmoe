@@ -18,11 +18,11 @@
             <span><i class="nexmoefont iconfont solo-calendarl"></i>{{ .Date.Format "2006年01月02日" }}</span>
             {{ with .Params.categories }}
             {{ range first 1 . }}
-            <span><a class="nexmoefont iconfont solo-category" href="{{ (site.GetPage "categories" .).Permalink }}">{{ . }}</a></span>
+            <span><a class="nexmoefont iconfont solo-category" href="{{ (site.GetPage (printf "/categories/%s" .)).Permalink }}">{{ . }}</a></span>
             {{ end }}
             {{ end }}
             {{ range .Params.tags }}
-            <span><a class="nexmoefont iconfont solo-tag" href="{{ (site.GetPage "tags" .).Permalink }}">{{ . }}</a></span>
+            <span><a class="nexmoefont iconfont solo-tag" href="{{ (site.GetPage (printf "/tags/%s" .)).Permalink }}">{{ . }}</a></span>
             {{ end }}
         </div>
         <article>

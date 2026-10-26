@@ -15,7 +15,7 @@
         <div class="nexmoe-post-meta">
             <span><i class="nexmoefont iconfont solo-calendarl"></i>{{ .Date.Format "2006年01月02日" }}</span>
             {{ range .Params.tags }}
-            <span><a class="nexmoefont iconfont solo-tag" href="{{ (site.GetPage "tags" .).Permalink }}">{{ . }}</a></span>
+            <span><a class="nexmoefont iconfont solo-tag" href="{{ (site.GetPage (printf "/tags/%s" .)).Permalink }}">{{ . }}</a></span>
             {{ end }}
         </div>
         <article>

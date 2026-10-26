@@ -127,7 +127,7 @@ function toggleToc() {
         {{ end }}
         {{ end }}
         {{ range .Params.tags }}
-        <span><a class="nexmoefont iconfont solo-tag" href="{{ (site.GetPage "tags" .).Permalink }}">{{ . }}</a></span>
+        <span><a class="nexmoefont iconfont solo-tag" href="{{ (site.GetPage (printf "/tags/%s" .)).Permalink }}">{{ . }}</a></span>
         {{ end }}
     </div>
     <article>
