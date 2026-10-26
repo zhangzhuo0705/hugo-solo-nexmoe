@@ -279,10 +279,29 @@ cp themes/hugo-solo-nexmoe/archetypes/links.md content/links.md
 hugo new content posts/my-post.md
 ```
 
+Hugo 会优先使用站点的 `archetypes/posts.md`，没有时使用主题自带的同名文件。生成的 front matter 类似：
+
+```yaml
+---
+title: "My Post"
+date: 2026-10-19T10:00:00+08:00
+draft: true
+description: ""
+cover: ""
+categories: []
+tags: []
+toc: true
+---
+```
+
+`title` 由文件名生成，`date` 为当前时间；其余字段需要填写。新文章默认 `draft: true`，完成后再改为 `false`，或预览时使用 `hugo server -D`。
+
+填写后的示例：
+
 ```yaml
 ---
 title: "文章标题"
-date: 2026-10-19
+date: 2026-10-19T10:00:00+08:00
 draft: false
 description: "首页显示的文章摘要。"
 cover: "images/cover.jpg"

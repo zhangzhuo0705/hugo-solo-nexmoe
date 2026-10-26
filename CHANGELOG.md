@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tags menu entry and Chinese section title in the example site
 - Inline SVG folder icon for category badges
 - Theme-provided content for `/links/`, `/archives/`, and the `/tags/` title, so sites no longer need to copy special-page stubs
+- `archetypes/posts.md` with the full article front matter used by `hugo new content posts/...`
 
 ### Changed
 - Updated the demo avatar and replaced placeholder imagery
@@ -24,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Raised the declared minimum Hugo version to 0.128.0
 - Updated the theme screenshot to the required 3:2 aspect ratio
 - Expanded the README minimal configuration section with field-by-field guidance
+- Documented the generated article template and draft handling
 - Rendered the tags page with the tagcloud layout instead of a custom pill list
 - Limited the sidebar tag cloud to the 10 most-used tags
 - Show category and tags together on tag and category term cards
