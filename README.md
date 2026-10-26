@@ -120,29 +120,21 @@ theme = "hugo-solo-nexmoe"
 
 ## 特殊页面
 
+主题自带以下内容文件，安装后页面直接可用，不需要手动复制：
+
+| 页面 | 主题内容文件 | 说明 |
+| --- | --- | --- |
+| `/links/` | `content/links.md` | `layout: links` 使用 `layouts/links.html`，数据来自 `params.links` |
+| `/archives/` | `content/archives.md` | `layout: archives` 使用 `layouts/archives.html`，数据来自站内文章 |
+| `/tags/` | `content/tags/_index.md` | 只用于设置标签页标题；`/tags/` 由 taxonomy 自动生成 |
+
+Hugo 会自动挂载主题的 `content/`。站点中同路径文件优先级更高，可用于覆盖标题或布局，例如自定义友情链接页：
+
 ```bash
 cp themes/hugo-solo-nexmoe/archetypes/links.md content/links.md
-cp themes/hugo-solo-nexmoe/archetypes/archives.md content/archives.md
 ```
 
-`/links/` 和 `/archives/` 不是 Hugo 自动生成的列表页，而是主题提供的两个特殊布局。Hugo 只有在 `content/` 下存在对应内容文件时才会生成 URL，所以需要复制这两个只含 front matter 的模板：
-
-- `content/links.md`：`layout: links` 使用 `layouts/links.html`，数据来自 `params.links`
-- `content/archives.md`：`layout: archives` 使用 `layouts/archives.html`，数据来自站内文章
-
-主题只提供布局和 archetype，不能自动向站点 `content/` 写入文件。也可以手动创建这两个文件；`archetypes/` 中的文件只是可直接复制的 front matter 模板。
-
-标签页不同：`/tags/` 由 Hugo taxonomy 自动生成，不需要对应的内容文件。
-
-## 标签页
-
-`/tags/` 由 Hugo taxonomy 自动生成，使用标签云样式。创建 `content/tags/_index.md` 可设置页面标题：
-
-```yaml
----
-title: "标签"
----
-```
+`/links/` 和 `/archives/` 本质是普通内容页 + `layout` 指定特殊布局，不是 taxonomy。标签页 `/tags/` 由 Hugo taxonomy 自动生成，`_index.md` 只覆盖标题，不负责创建路由。
 
 侧栏标签云默认只展示文章数最多的前 10 个标签，可通过 `params.tagCloudLimit` 调整；完整标签列表始终在 `/tags/` 页面展示。
 

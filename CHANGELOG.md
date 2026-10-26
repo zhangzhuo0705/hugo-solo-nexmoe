@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configurable sidebar tag cloud limit through `params.tagCloudLimit`
 - Tags menu entry and Chinese section title in the example site
 - Inline SVG folder icon for category badges
+- Theme-provided content for `/links/`, `/archives/`, and the `/tags/` title, so sites no longer need to copy special-page stubs
 
 ### Changed
 - Updated the demo avatar and replaced placeholder imagery
