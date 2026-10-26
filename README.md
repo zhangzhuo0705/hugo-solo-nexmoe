@@ -126,7 +126,15 @@ cp themes/hugo-solo-nexmoe/archetypes/archives.md content/archives.md
 | `params.mainSections` | string array | Hugo 自动推断 | 首页展示的内容分区，推荐设为 `["posts"]` |
 | `params.avatar` | string | `avatar.png` | 本地站点路径或完整 HTTPS 地址 |
 | `params.hitokoto` | string | 内置中文句子 | 页面底部的一言文字 |
+| `params.footer` | string (HTML) | 主题内置版权信息 | 自定义侧栏页脚，支持 HTML；不设置时使用默认内容 |
 | `pagination.pagerSize` | integer | `10` | 每页文章数量 |
+
+页脚示例：
+
+```toml
+[params]
+  footer = '© 2026 <a href="https://example.com">Your Name</a> · Powered by <a href="https://gohugo.io">Hugo</a>'
+```
 
 ### 社交链接
 
